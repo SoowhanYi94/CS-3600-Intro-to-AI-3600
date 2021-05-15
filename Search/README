@@ -1,6 +1,10 @@
 
 CS 3600 Introduction to Artificial Intelligence
-Search
+Original Document can be found here
+https://bhrolenok.github.io/teaching/cs-3600-spr2019/project1/index.html
+
+Search 
+
 -	본인이 edit 한 파일
 	Search.py
 	depthFirstSearch(problem)
