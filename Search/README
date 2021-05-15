@@ -1,1 +1,46 @@
 
+CS 3600 Introduction to Artificial Intelligence
+Search
+-	본인이 edit 한 파일
+	Search.py
+	depthFirstSearch(problem)
+	DFS 알고리즘을 이용해 목적지까지 경로 탐색하는 함수
+	Test
+	python pacman.py -l tinyMaze -p SearchAgent
+	python pacman.py -l mediumMaze -p SearchAgent
+	python pacman.py -l bigMaze -z .5 -p SearchAgent
+
+	breadthFirstSearch(problem)
+	BFS 알고리즘을 이용해 목적지까지 경로 탐색하는 함수
+	Test
+	python pacman.py -l mediumMaze -p SearchAgent -a fn=bfs
+	python pacman.py -l bigMaze -p SearchAgent -a fn=bfs -z .5
+
+	 uniformCostSearch(problem)
+	목적지까지 가장 Cost가 적은 경로를 탐색하는 함수
+	Test
+	python pacman.py -l mediumMaze -p SearchAgent -a fn=ucs
+	python pacman.py -l mediumDottedMaze -p StayEastSearchAgent
+	python pacman.py -l mediumScaryMaze -p StayWestSearchAgent
+
+	 aStarSearch
+	A* 알고리즘을 이용해 목적지까지 경로를 탐색하는 함수
+	Test
+	python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic
+
+
+  searchAgents.py
+	CornersProblem(Search.SearchProblem)
+	BFS를 이용해 4개의 코너를 순차적으로 방문한다
+	Test
+	python pacman.py -l tinyCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
+	python pacman.py -l mediumCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
+
+	A* 를 이용해 4개의 코너를 순차적으로 방문한다
+	Test
+	python pacman.py -l mediumCorners -p AStarCornersAgent -z 0.5
+
+	A* 를 이용해 pacman이 먹어야하는 음식들을 다 먹는다
+	Test
+	python pacman.py -l trickySearch -p AStarFoodSearchAgent
+
