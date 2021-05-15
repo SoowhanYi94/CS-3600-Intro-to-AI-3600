@@ -8,7 +8,7 @@ https://bhrolenok.github.io/teaching/cs-3600-spr2019/project3/index.html
   - bustersAgent.py
   - inference.py
 
-bustersAgent.py
+inference.py
   ExactInference class
   - observe method
     - 팩맨은 belief distribution을 통해 유령의 위치를 파악한다. 팩맨이 움직임에 따라 belief distribution이 업데이트 된다.
@@ -19,11 +19,14 @@ bustersAgent.py
       이 정보는 무시해도 된다. 이를 통해 유령의 위치와 움직임을 예상한다. 이 테스트에서는 유령이 밑으로 움직이는 경향이 있으므로 distribution이 바닥에 집중되있는 것을 볼 수 있을 것이다. 
     - test
       python autograder.py -t test_cases/q2/2-ExactElapse
+bustersAgent.py
+  GreedyBustersAgent class
   - chooseAction method
     - 위에 두 method를 사용해 유령을 추적한다. 또한 simple greedy hunting strategy를 이용해 유령에 가까이 팩맨이 움직인다. 
     - test
       python autograder.py -q q3
       python autograder.py -q q3 --no-graphics
+inference.py
   ParticleFilter class
   - initializeUniformly method
     - particle filter를 initialize 한다. 처음 시작할때나 particle이 아무런 weight를 주지 않을때 resample 하여아함으로 filter를 initialize 한다. 
