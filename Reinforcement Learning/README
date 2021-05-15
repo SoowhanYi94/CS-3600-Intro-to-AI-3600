@@ -1,1 +1,24 @@
+Reinforement learning
+Original document can be found here.
+https://bhrolenok.github.io/teaching/cs-3600-spr2019/project2/index.html
+본인이 edit 한 파일
+  - valueIterationAgent.py
+  - qlearningAgents.py
+  - analysis.py
 
+valueIterationAgents.py
+  - MDP (Markov Decision process)를 이용해 policy를 만들고 이에 따른 취할 액션을 정한다 
+  - test
+    python gridworld.py -a value -i 100 -k 10
+      - 100번의 iteration으로 policy를 만들고 그에 따른 액션들에 따라 목적지에 도달 한다. 이것을 10번 반복 한다.
+    python gridworld.py -a value -i 100 -g BridgeGrid --discount 0.9 --noise 0.001
+      - discount factor  와 noise의 값을 바꾸고 100번의 iteration으로 policy를 만들고 그에 따른 액션들에 따라 목적지에 도달 한다. 이것을 10번 반복 한다. 
+qlearningAgent.py
+  - trial and error를 통해 agent들이 학습하고 경로를 goal까지의 액션들을 정한다.
+  - Test
+    python gridworld.py -a q -k 5 -m
+    - 5번의 움직임을 직접 컨트롤 하여 학습 시킨다
+    python gridworld.py -a q -k 100 
+    - 100번의 iteration을 통해 policy를 학습시킨다. 이때 액션을 정할때 Epsilon Greedy selection을 사용한다
+      epsilon의 확률로 random action을 하고 1-epsilon의 확률로 학습되가는 policy에 따라 행동하고 iteration 마다 epsion이 업데이트 된다. 
+      
